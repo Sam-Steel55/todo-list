@@ -25,7 +25,7 @@ export default function App() {
     }
   };
 
-  // Function to delete a todo from the list
+  // Function to delete a task from the list
   const deleteTodo = (text) => {
     const newTodos = todos.filter((todo) => todo.name !== text.name);
     setTodos(newTodos);
