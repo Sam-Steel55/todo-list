@@ -3,7 +3,7 @@ import './App.css';
 
 // Main App component
 export default function App() {
-  // State for the new task input and list of todos
+  // State for the new task input and existing list of tasks
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([
     {
@@ -49,7 +49,7 @@ export default function App() {
       </div>
       <hr />
 
-      {/* Conditional rendering based on the number of todos */}
+      {/* Conditional rendering based on the number of tasks */}
       {todos.length > 0 ? (
         <ul className='todo-list'>
           {/* Mapping through todos to display each task */}
@@ -67,7 +67,7 @@ export default function App() {
           ))}
         </ul>
       ) : (
-        // Display message when there are no tasks
+        // Display message when there are no tasks in the list
         <div className='empty'>
           <p>No New Tasks</p>
         </div>
